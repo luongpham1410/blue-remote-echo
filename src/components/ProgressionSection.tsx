@@ -44,52 +44,49 @@ const ProgressionSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-50 relative overflow-hidden">
-      {/* Gradient decorations */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-blue-400/10 to-purple-500/10 rounded-full -translate-x-48 -translate-y-48"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-green-400/10 to-blue-500/10 rounded-full translate-x-48 translate-y-48"></div>
-      
+    <section className="py-24 bg-gray-50/50 relative overflow-hidden">
       <div className="container mx-auto px-6 relative">
-        <div className="text-center mb-16">
-          <div className="inline-block px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 text-transparent bg-clip-text font-semibold mb-4 uppercase tracking-wider">
-            <span className="bg-gradient-to-r from-blue-700 to-purple-700 bg-clip-text text-transparent text-sm font-semibold">
+        <div className="text-center mb-20">
+          <div className="inline-block px-6 py-3 bg-purple-50 rounded-full text-sm font-semibold mb-6 uppercase tracking-wider border border-purple-100">
+            <span className="bg-gradient-to-r from-purple-600 to-purple-700 bg-clip-text text-transparent">
               Advance Your Skills
             </span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Progress further, increase earnings.
+          <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight">
+            Progress further,<br />
+            <span className="text-gray-600">increase earnings.</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Gain expertise in more challenging assignments that offer higher compensation.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
           {levels.map((level, index) => (
             <div key={index} className="group animate-fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
-              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 h-full border border-gray-100">
-                <div className="w-full h-48 rounded-xl mb-6 overflow-hidden relative">
+              <div className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-lg transition-all duration-500 transform hover:-translate-y-1 h-full border border-gray-100">
+                <div className="w-full h-52 rounded-2xl mb-8 overflow-hidden relative">
                   <img 
                     src={level.image}
                     alt={level.title}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute top-4 left-4 bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg">
-                    <span className="text-2xl font-bold text-blue-600">{index + 1}</span>
+                  <div className="absolute top-6 left-6 bg-white rounded-2xl w-12 h-12 flex items-center justify-center shadow-lg">
+                    <span className="text-xl font-bold text-blue-600">{index + 1}</span>
                   </div>
                 </div>
                 
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{level.title}</h3>
-                <p className="text-gray-600 mb-6 text-sm">{level.description}</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">{level.title}</h3>
+                <p className="text-gray-600 mb-8 text-lg leading-relaxed">{level.description}</p>
                 
-                <div className="space-y-4">
+                <div className="space-y-6">
                   <div>
-                    <div className="text-sm font-semibold text-gray-500 mb-2 text-center">Difficulty</div>
+                    <div className="text-sm font-semibold text-gray-500 mb-3 text-center">Difficulty</div>
                     {renderColoredDots(3, level.difficulty, 'difficulty')}
                   </div>
                   
                   <div>
-                    <div className="text-sm font-semibold text-gray-500 mb-2 text-center">Pay</div>
+                    <div className="text-sm font-semibold text-gray-500 mb-3 text-center">Pay</div>
                     {renderColoredDots(3, level.pay, 'pay')}
                   </div>
                 </div>

@@ -13,15 +13,6 @@ const Header = () => {
             <span className="text-2xl font-bold text-gray-900">RemoteJobs</span>
           </div>
           
-          <div className="hidden md:flex items-center space-x-8">
-            <a href="#how-it-works" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
-              How it works
-            </a>
-            <a href="#blog" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
-              Blog
-            </a>
-          </div>
-          
           <div className="flex items-center space-x-4">
             <Button variant="ghost" className="text-gray-600 hover:text-blue-600">
               Login
