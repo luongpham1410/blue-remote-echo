@@ -16,14 +16,21 @@ const FlexibilitySection = () => {
         </div>
         
         <div className="flex justify-center">
-          <div className="relative max-w-4xl">
-            <div className="w-full h-96 bg-gradient-to-br from-blue-100 to-indigo-200 rounded-3xl shadow-2xl flex items-center justify-center">
-              <div className="text-center text-blue-700">
-                <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                  <div className="w-12 h-12 bg-blue-600 rounded-full"></div>
+          <div className="relative max-w-4xl w-full">
+            <div className="w-full h-96 rounded-3xl shadow-2xl overflow-hidden relative">
+              <img 
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=400&fit=crop"
+                alt="Remote work flexibility"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-blue-600/30 flex items-center justify-center">
+                <div className="text-center text-white">
+                  <div className="w-24 h-24 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <div className="w-12 h-12 bg-white rounded-full"></div>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2">Remote Freedom</h3>
+                  <p className="text-lg opacity-90">Work on your own terms</p>
                 </div>
-                <h3 className="text-2xl font-bold mb-2">Remote Freedom</h3>
-                <p className="text-lg">Work on your own terms</p>
               </div>
             </div>
           </div>

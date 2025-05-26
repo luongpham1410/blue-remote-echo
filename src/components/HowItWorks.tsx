@@ -6,17 +6,20 @@ const HowItWorks = () => {
     {
       icon: BookOpen,
       title: "Start Learning",
-      description: "Master new skills through our comprehensive online training programs or free interactive tutorials"
+      description: "Master new skills through our comprehensive online training programs or free interactive tutorials",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=250&fit=crop"
     },
     {
       icon: CheckCircle,
       title: "Finish Projects",
-      description: "Work on assignments from opportunities you've successfully qualified for"
+      description: "Work on assignments from opportunities you've successfully qualified for",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=250&fit=crop"
     },
     {
       icon: DollarSign,
       title: "Receive Payment Weekly",
-      description: "Get compensated quickly through PayPal or AirTM based on your performance & completed assignments"
+      description: "Get compensated quickly through PayPal or AirTM based on your performance & completed assignments",
+      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=250&fit=crop"
     }
   ];
 
@@ -38,15 +41,24 @@ const HowItWorks = () => {
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
           {steps.map((step, index) => (
             <div key={index} className="relative group animate-fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
-              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="relative">
-                  <div className="w-96 h-64 bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl mb-6 flex items-center justify-center">
-                    <step.icon className="w-16 h-16 text-blue-600" />
+                  <div className="w-full h-48 rounded-xl mb-6 overflow-hidden relative">
+                    <img 
+                      src={step.image}
+                      alt={step.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-blue-600/20 flex items-center justify-center">
+                      <step.icon className="w-12 h-12 text-white drop-shadow-lg" />
+                    </div>
                   </div>
                   
                   {index < steps.length - 1 && (
-                    <div className="hidden md:block absolute -right-6 top-1/2 transform -translate-y-1/2">
-                      <ArrowRight className="w-8 h-8 text-blue-400" />
+                    <div className="hidden md:block absolute -right-6 top-1/2 transform -translate-y-1/2 z-10">
+                      <div className="bg-white rounded-full p-2 shadow-lg">
+                        <ArrowRight className="w-6 h-6 text-blue-400" />
+                      </div>
                     </div>
                   )}
                 </div>
