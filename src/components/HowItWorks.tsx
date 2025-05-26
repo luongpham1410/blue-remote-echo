@@ -24,9 +24,9 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-16 bg-gray-50 relative overflow-hidden">
+    <section id="how-it-works" className="py-12 bg-white relative overflow-hidden">
       <div className="container mx-auto px-6 relative">
-        <div className="text-center mb-12">
+        <div className="text-center mb-10">
           <div className="inline-block px-4 py-2 bg-blue-50 rounded-full text-sm font-semibold mb-4 uppercase tracking-wider border border-blue-100">
             <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
               How It Works
@@ -42,12 +42,12 @@ const HowItWorks = () => {
         </div>
         
         <div className="relative max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             {steps.map((step, index) => (
               <div key={index} className="relative group animate-fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
-                <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 h-full min-h-[400px] flex flex-col">
-                  <div className="relative mb-6">
-                    <div className="w-full h-40 rounded-xl overflow-hidden relative">
+                <div className="bg-gray-50 rounded-2xl p-6 shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 h-full min-h-[350px] flex flex-col">
+                  <div className="relative mb-4">
+                    <div className="w-full h-32 rounded-xl overflow-hidden relative">
                       <img 
                         src={step.image}
                         alt={step.title}
@@ -83,7 +83,7 @@ const HowItWorks = () => {
           </div>
         </div>
         
-        <div className="text-center mt-12">
+        <div className="text-center mt-10">
           <button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold text-lg px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
             Begin earning today
           </button>
