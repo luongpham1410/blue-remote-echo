@@ -52,8 +52,35 @@ const FlexibilitySection = () => {
           </div>
           
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Image Section */}
-            <div className="order-2 lg:order-1">
+            {/* Content Section - Now on the left */}
+            <div className="space-y-6">
+              {features.map((feature, index) => (
+                <div 
+                  key={index} 
+                  className="flex items-start space-x-4 p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
+                >
+                  <div className="flex-shrink-0">
+                    <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg flex items-center justify-center shadow-lg">
+                      <feature.icon className="w-5 h-5 text-white" />
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-1">{feature.title}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
+                  </div>
+                </div>
+              ))}
+
+              {/* CTA - Now at the bottom of the left section */}
+              <div className="pt-2">
+                <button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold text-lg px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+                  Start working flexibly
+                </button>
+              </div>
+            </div>
+
+            {/* Image Section - Now on the right */}
+            <div className="order-2 lg:order-2">
               <div className="relative">
                 <div className="relative bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl p-1 shadow-2xl">
                   <img 
@@ -80,33 +107,6 @@ const FlexibilitySection = () => {
 
                 {/* Background decoration */}
                 <div className="absolute -z-10 top-8 right-8 w-full h-full bg-gradient-to-br from-blue-200 to-indigo-200 rounded-3xl opacity-20"></div>
-              </div>
-            </div>
-
-            {/* Content Section */}
-            <div className="order-1 lg:order-2 space-y-8">
-              {features.map((feature, index) => (
-                <div 
-                  key={index} 
-                  className="flex items-start space-x-4 p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
-                >
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl flex items-center justify-center shadow-lg">
-                      <feature.icon className="w-6 h-6 text-white" />
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
-                    <p className="text-gray-600 leading-relaxed">{feature.description}</p>
-                  </div>
-                </div>
-              ))}
-
-              {/* CTA */}
-              <div className="pt-4">
-                <button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold text-lg px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
-                  Start working flexibly
-                </button>
               </div>
             </div>
           </div>
