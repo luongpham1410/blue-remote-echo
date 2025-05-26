@@ -51,21 +51,21 @@ const FlexibilitySection = () => {
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Content Section - Now on the left */}
-            <div className="space-y-6">
+            <div className="space-y-4">
               {features.map((feature, index) => (
                 <div 
                   key={index} 
-                  className="flex items-start space-x-4 p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
+                  className="flex items-start space-x-3 p-3 bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
                 >
                   <div className="flex-shrink-0">
-                    <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg flex items-center justify-center shadow-lg">
-                      <feature.icon className="w-5 h-5 text-white" />
+                    <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg flex items-center justify-center shadow-lg">
+                      <feature.icon className="w-4 h-4 text-white" />
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-1">{feature.title}</h3>
+                    <h3 className="text-base font-bold text-gray-900 mb-1">{feature.title}</h3>
                     <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
                   </div>
                 </div>
@@ -79,8 +79,8 @@ const FlexibilitySection = () => {
               </div>
             </div>
 
-            {/* Image Section - Now on the right */}
-            <div className="order-2 lg:order-2">
+            {/* Image Section - Now on the right with adjusted positioning */}
+            <div className="order-2 lg:order-2 -mt-4">
               <div className="relative">
                 <div className="relative bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl p-1 shadow-2xl">
                   <img 
