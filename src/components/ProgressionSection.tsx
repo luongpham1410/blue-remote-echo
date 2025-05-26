@@ -19,19 +19,23 @@ const ProgressionSection = () => {
       title: "Advanced Assignments",
       difficulty: 3,
       pay: 3,
-      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=250&fit=crop&crop=entropy",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=250&fit=crop",
       description: "Specialized projects with higher compensation"
     }
   ];
 
-  const renderDots = (count: number, active: number) => {
+  const renderColoredDots = (count: number, active: number, type: 'difficulty' | 'pay') => {
+    const colors = type === 'difficulty' 
+      ? ['bg-green-500', 'bg-yellow-500', 'bg-red-500']
+      : ['bg-green-500', 'bg-green-500', 'bg-green-500'];
+    
     return (
       <div className="flex space-x-1 justify-center">
         {[1, 2, 3].map((dot) => (
           <div
             key={dot}
             className={`w-3 h-3 rounded-full ${
-              dot <= active ? 'bg-blue-500' : 'bg-gray-300'
+              dot <= active ? colors[dot - 1] : 'bg-gray-300'
             }`}
           />
         ))}
@@ -40,11 +44,17 @@ const ProgressionSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="container mx-auto px-6">
+    <section className="py-20 bg-gray-50 relative overflow-hidden">
+      {/* Gradient decorations */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-blue-400/10 to-purple-500/10 rounded-full -translate-x-48 -translate-y-48"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-green-400/10 to-blue-500/10 rounded-full translate-x-48 translate-y-48"></div>
+      
+      <div className="container mx-auto px-6 relative">
         <div className="text-center mb-16">
-          <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-4 uppercase tracking-wider">
-            Advance Your Skills
+          <div className="inline-block px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 text-transparent bg-clip-text font-semibold mb-4 uppercase tracking-wider">
+            <span className="bg-gradient-to-r from-blue-700 to-purple-700 bg-clip-text text-transparent text-sm font-semibold">
+              Advance Your Skills
+            </span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Progress further, increase earnings.
@@ -57,7 +67,7 @@ const ProgressionSection = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {levels.map((level, index) => (
             <div key={index} className="group animate-fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
-              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 h-full">
+              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 h-full border border-gray-100">
                 <div className="w-full h-48 rounded-xl mb-6 overflow-hidden relative">
                   <img 
                     src={level.image}
@@ -75,12 +85,12 @@ const ProgressionSection = () => {
                 <div className="space-y-4">
                   <div>
                     <div className="text-sm font-semibold text-gray-500 mb-2 text-center">Difficulty</div>
-                    {renderDots(3, level.difficulty)}
+                    {renderColoredDots(3, level.difficulty, 'difficulty')}
                   </div>
                   
                   <div>
                     <div className="text-sm font-semibold text-gray-500 mb-2 text-center">Pay</div>
-                    {renderDots(3, level.pay)}
+                    {renderColoredDots(3, level.pay, 'pay')}
                   </div>
                 </div>
               </div>

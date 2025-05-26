@@ -24,11 +24,17 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-20 bg-white">
-      <div className="container mx-auto px-6">
+    <section id="how-it-works" className="py-20 bg-white relative overflow-hidden">
+      {/* Gradient decorations */}
+      <div className="absolute top-10 right-0 w-72 h-72 bg-gradient-to-bl from-purple-400/10 to-pink-500/10 rounded-full translate-x-36"></div>
+      <div className="absolute bottom-10 left-0 w-72 h-72 bg-gradient-to-tr from-blue-400/10 to-cyan-500/10 rounded-full -translate-x-36"></div>
+      
+      <div className="container mx-auto px-6 relative">
         <div className="text-center mb-16">
-          <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-4 uppercase tracking-wider">
-            How It Works
+          <div className="inline-block px-4 py-2 bg-gradient-to-r from-blue-100 to-cyan-100 rounded-full text-sm font-semibold mb-4 uppercase tracking-wider">
+            <span className="bg-gradient-to-r from-blue-700 to-cyan-700 bg-clip-text text-transparent">
+              How It Works
+            </span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Complete projects, earn income. It's that straightforward
@@ -50,7 +56,7 @@ const HowItWorks = () => {
                         alt={step.title}
                         className="w-full h-full object-cover"
                       />
-                      <div className="absolute top-4 right-4 bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg">
+                      <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg">
                         <step.icon className="w-6 h-6" />
                       </div>
                     </div>
@@ -68,20 +74,20 @@ const HowItWorks = () => {
           {/* Arrows positioned between boxes */}
           <div className="hidden md:block">
             <div className="absolute top-1/2 left-1/3 transform -translate-y-1/2 -translate-x-1/2">
-              <div className="bg-white rounded-full p-3 shadow-lg border border-gray-200">
-                <ArrowRight className="w-6 h-6 text-blue-400" />
+              <div className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-full p-3 shadow-lg">
+                <ArrowRight className="w-6 h-6 text-white" />
               </div>
             </div>
             <div className="absolute top-1/2 left-2/3 transform -translate-y-1/2 -translate-x-1/2">
-              <div className="bg-white rounded-full p-3 shadow-lg border border-gray-200">
-                <ArrowRight className="w-6 h-6 text-blue-400" />
+              <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-full p-3 shadow-lg">
+                <ArrowRight className="w-6 h-6 text-white" />
               </div>
             </div>
           </div>
         </div>
         
         <div className="text-center mt-12">
-          <button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold text-lg px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+          <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold text-lg px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
             Begin earning today
           </button>
         </div>
