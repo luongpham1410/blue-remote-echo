@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Play, Star, Users, TrendingUp } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -49,9 +50,11 @@ const HeroSection = () => {
               <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold text-lg px-8 py-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
                 Begin earning today
               </Button>
-              <Button variant="outline" className="flex items-center gap-2 text-blue-600 border-blue-200 hover:bg-blue-50 font-semibold text-lg px-8 py-6 rounded-full transition-all duration-300">
-                <Play className="w-5 h-5" />
-                Watch Demo
+              <Button variant="outline" className="flex items-center gap-2 text-blue-600 border-blue-200 hover:bg-blue-50 font-semibold text-lg px-8 py-6 rounded-full transition-all duration-300" asChild>
+                <Link to="/jobs">
+                  <Play className="w-5 h-5" />
+                  View Jobs
+                </Link>
               </Button>
             </div>
 

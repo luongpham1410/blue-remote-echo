@@ -1,5 +1,6 @@
 
 import { ArrowRight, BookOpen, CheckCircle, DollarSign } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HowItWorks = () => {
   const steps = [
@@ -84,9 +85,9 @@ const HowItWorks = () => {
         </div>
         
         <div className="text-center mt-10">
-          <button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold text-lg px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
-            Begin earning today
-          </button>
+          <Link to="/jobs" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold text-lg px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 inline-block">
+            View Jobs
+          </Link>
         </div>
       </div>
     </section>
