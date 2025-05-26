@@ -5,19 +5,22 @@ const ProgressionSection = () => {
       title: "Beginner Tasks",
       difficulty: 1,
       pay: 1,
-      description: "Simple data entry and basic online tasks"
+      description: "Simple data entry and basic online tasks",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
     {
       title: "Intermediate Projects", 
       difficulty: 2,
       pay: 2,
-      description: "Content creation and moderate complexity assignments"
+      description: "Content creation and moderate complexity assignments",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
     {
       title: "Advanced Assignments",
       difficulty: 3,
       pay: 3,
-      description: "Specialized projects with higher compensation"
+      description: "Specialized projects with higher compensation",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     }
   ];
 
@@ -79,14 +82,12 @@ const ProgressionSection = () => {
           {levels.map((level, index) => (
             <div key={index} className="group animate-fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
               <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 h-full border border-gray-200">
-                <div className="w-full h-40 rounded-xl mb-6 bg-gray-100 flex items-center justify-center relative overflow-hidden">
-                  <div className="absolute inset-4 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center">
-                    <div className="w-8 h-8 bg-gray-400 rounded opacity-50">
-                      <svg className="w-full h-full text-gray-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                  </div>
+                <div className="w-full h-40 rounded-xl mb-6 overflow-hidden">
+                  <img 
+                    src={level.image} 
+                    alt={level.title}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{level.title}</h3>
