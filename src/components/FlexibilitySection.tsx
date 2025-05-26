@@ -51,7 +51,7 @@ const FlexibilitySection = () => {
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Content Section - Now on the left */}
             <div className="space-y-6">
               {features.map((feature, index) => (
@@ -79,7 +79,7 @@ const FlexibilitySection = () => {
               </div>
             </div>
 
-            {/* Image Section - Now on the right */}
+            {/* Image Section - Now on the right, aligned with first feature box */}
             <div className="order-2 lg:order-2">
               <div className="relative">
                 <div className="relative bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl p-1 shadow-2xl">
