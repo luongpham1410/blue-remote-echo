@@ -24,15 +24,15 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-16 bg-gray-50 relative overflow-hidden">
+    <section id="how-it-works" className="py-12 bg-white relative overflow-hidden">
       <div className="container mx-auto px-6 relative">
-        <div className="text-center mb-12">
+        <div className="text-center mb-10">
           <div className="inline-block px-4 py-2 bg-blue-50 rounded-full text-sm font-semibold mb-4 uppercase tracking-wider border border-blue-100">
             <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
               How It Works
             </span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 leading-tight">
             Complete projects, earn income.<br />
             <span className="text-gray-600">It's that straightforward</span>
           </h2>
@@ -42,26 +42,26 @@ const HowItWorks = () => {
         </div>
         
         <div className="relative max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             {steps.map((step, index) => (
               <div key={index} className="relative group animate-fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
-                <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 h-full min-h-[400px] flex flex-col">
-                  <div className="relative mb-6">
-                    <div className="w-full h-40 rounded-xl overflow-hidden relative">
+                <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 h-full min-h-[350px] flex flex-col">
+                  <div className="relative mb-5">
+                    <div className="w-full h-32 rounded-xl overflow-hidden relative">
                       <img 
                         src={step.image}
                         alt={step.title}
                         className="w-full h-full object-cover"
                       />
-                      <div className="absolute top-4 right-4 bg-white text-blue-600 rounded-xl w-12 h-12 flex items-center justify-center shadow-lg">
-                        <step.icon className="w-6 h-6" />
+                      <div className="absolute top-3 right-3 bg-white text-blue-600 rounded-xl w-10 h-10 flex items-center justify-center shadow-lg">
+                        <step.icon className="w-5 h-5" />
                       </div>
                     </div>
                   </div>
                   
                   <div className="flex-1 flex flex-col">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
-                    <p className="text-gray-600 leading-relaxed flex-1">{step.description}</p>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">{step.title}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed flex-1">{step.description}</p>
                   </div>
                 </div>
               </div>
@@ -83,7 +83,7 @@ const HowItWorks = () => {
           </div>
         </div>
         
-        <div className="text-center mt-12">
+        <div className="text-center mt-10">
           <button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold text-lg px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
             Begin earning today
           </button>
