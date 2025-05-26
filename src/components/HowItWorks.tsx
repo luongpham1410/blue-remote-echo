@@ -36,7 +36,7 @@ const HowItWorks = () => {
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             Complete projects, <span className="relative">
               <span>earn income</span>
-              <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full"></div>
+              <div className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full"></div>
             </span>.<br />
             <span className="text-gray-600">It's that straightforward</span>
           </h2>

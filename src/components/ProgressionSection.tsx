@@ -73,7 +73,7 @@ const ProgressionSection = () => {
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             Progress through <span className="relative">
               <span>levels</span>
-              <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full"></div>
+              <div className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full"></div>
             </span>, increase earnings.
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">

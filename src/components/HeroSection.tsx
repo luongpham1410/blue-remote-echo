@@ -36,7 +36,7 @@ const HeroSection = () => {
               Make Money Working{" "}
               <span className="relative">
                 <span className="gradient-text">Remote Jobs</span>
-                <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full"></div>
+                <div className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full"></div>
               </span>{" "}
               From Home
             </h1>
