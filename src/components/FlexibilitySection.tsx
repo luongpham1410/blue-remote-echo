@@ -23,13 +23,15 @@ const FlexibilitySection = () => {
                 alt="Remote work flexibility"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-blue-600/30 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <div className="w-24 h-24 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                    <div className="w-12 h-12 bg-white rounded-full"></div>
+              <div className="absolute bottom-6 left-6 bg-white rounded-2xl p-6 shadow-xl max-w-sm">
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+                    <div className="w-6 h-6 bg-white rounded-full"></div>
                   </div>
-                  <h3 className="text-2xl font-bold mb-2">Remote Freedom</h3>
-                  <p className="text-lg opacity-90">Work on your own terms</p>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-1">Remote Freedom</h3>
+                    <p className="text-gray-600">Work on your own terms</p>
+                  </div>
                 </div>
               </div>
             </div>

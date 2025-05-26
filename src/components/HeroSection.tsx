@@ -27,14 +27,11 @@ const HeroSection = () => {
               <img 
                 src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=500&h=400&fit=crop&crop=faces"
                 alt="Woman working remotely on laptop"
-                className="w-full h-80 object-cover rounded-3xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500"
+                className="w-full h-80 object-cover rounded-3xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 border-4 border-white"
               />
-              <div className="absolute inset-4 bg-white/20 backdrop-blur-sm rounded-2xl shadow-xl flex items-center justify-center">
-                <div className="text-center text-white">
-                  <div className="w-16 h-16 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4">
-                    <div className="w-8 h-8 bg-blue-600 rounded-full"></div>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">Start Your Journey</h3>
+              <div className="absolute -bottom-4 -right-4 bg-blue-600 text-white px-6 py-3 rounded-2xl shadow-lg">
+                <div className="text-center">
+                  <h3 className="text-lg font-semibold mb-1">Start Your Journey</h3>
                   <p className="text-sm opacity-90">Remote work made simple</p>
                 </div>
               </div>
